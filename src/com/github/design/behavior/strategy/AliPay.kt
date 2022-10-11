@@ -18,17 +18,17 @@ class AliPay :PayStrategy{
     private var signedIn = false
 
     init {
-        DATA_BASE.put("amanda1985", "amanda@ya.com");
-        DATA_BASE.put("qwerty", "john@amazon.eu");
+        DATA_BASE["amanda1985"] = "amanda@ya.com";
+        DATA_BASE["qwerty"] = "john@amazon.eu";
     }
 
 
     override fun pay(paymentAmount: Int): Boolean {
-        if (signedIn) {
-            System.out.println("Paying " + paymentAmount + " using PayPal.");
-            return true;
+        return if (signedIn) {
+            println("Paying $paymentAmount using PayPal.")
+            true
         } else {
-            return false;
+            false
         }
     }
 

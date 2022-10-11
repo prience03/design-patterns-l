@@ -4,7 +4,7 @@ import com.github.design.behavior.strategy.bean.Order
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
-
+//策略模式 测试
 fun main() {
 
     val priceOnProducts = hashMapOf<Int, Int>()

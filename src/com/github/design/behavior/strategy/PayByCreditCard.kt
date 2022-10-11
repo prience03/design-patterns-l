@@ -13,7 +13,7 @@ class PayByCreditCard : PayStrategy {
 
     override fun pay(paymentAmount: Int): Boolean {
         if (cardIsPresent()) {
-            println("Paying " + paymentAmount + " using Credit Card.")
+            println("Paying $paymentAmount using Credit Card.")
             card?.amount = card?.amount!! - paymentAmount
             return true;
         } else {
